@@ -1,0 +1,190 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f5f5f7;
+  color:#111;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav{
+  display:flex;
+  gap:20px;
+}
+
+nav button,
+.cart-btn{
+  border:none;
+  background:#111;
+  color:white;
+  padding:10px 20px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.page{
+  display:none;
+  padding:50px;
+  min-height:100vh;
+}
+
+.active{
+  display:block;
+}
+
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:50px;
+}
+
+.hero-text h1{
+  font-size:70px;
+  margin-bottom:20px;
+}
+
+.hero-text p{
+  font-size:20px;
+  color:#666;
+  margin-bottom:30px;
+}
+
+.hero img{
+  width:450px;
+  border-radius:30px;
+}
+
+.main-btn{
+  background:#111;
+  color:white;
+  border:none;
+  padding:15px 35px;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:25px;
+}
+
+.specs{
+  margin:15px 0;
+}
+
+.specs li{
+  margin-bottom:6px;
+}
+
+.buy-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  background:#111;
+  color:white;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+.about-boxes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.box{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+}
+
+.contact-form,
+.checkout{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,
+textarea{
+  padding:15px;
+  border:none;
+  border-radius:15px;
+}
+
+.cart-item{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:20px;
+  display:flex;
+  gap:20px;
+}
+
+.cart-item img{
+  width:140px;
+  border-radius:20px;
+}
+
+.total{
+  font-size:30px;
+  margin:30px 0;
+}
+
+.success{
+  background:#d4ffd4;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  animation:pop 0.5s ease;
+}
+
+@keyframes pop{
+  from{
+    transform:scale(0.5);
+    opacity:0;
+  }
+
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}

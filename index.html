@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apple Tech</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Apple Tech</h1>
+
+  <nav>
+    <button onclick="showPage('home')">Главная</button>
+    <button onclick="showPage('products')">Каталог</button>
+    <button onclick="showPage('about')">О нас</button>
+    <button onclick="showPage('contact')">Контакты</button>
+  </nav>
+
+  <button class="cart-btn" onclick="showPage('cart')">
+    Корзина: <span id="cart-count">0</span>
+  </button>
+</header>
+
+<section id="home" class="page active">
+  <div class="hero">
+
+    <div class="hero-text">
+      <h1>Think Different.</h1>
+
+      <p>
+        Лучшие устройства Apple в современном магазине Apple Tech.
+      </p>
+
+      <button class="main-btn" onclick="showPage('products')">
+        Смотреть каталог
+      </button>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200">
+  </div>
+</section>
+
+<section id="products" class="page">
+  <h2>Каталог продукции</h2>
+
+  <div class="products" id="products-container"></div>
+</section>
+
+<section id="about" class="page">
+  <h2>О компании</h2>
+
+  <div class="about-boxes">
+
+    <div class="box">
+      <h3>Адрес</h3>
+      <p>
+        Amsterdam Apple Center<br>
+        Damrak 21<br>
+        Netherlands
+      </p>
+    </div>
+
+    <div class="box">
+      <h3>Контакты</h3>
+      <p>
+        +31 20 123 4567<br>
+        support@appletech.com
+      </p>
+    </div>
+
+    <div class="box">
+      <h3>Часы работы</h3>
+      <p>
+        Пн-Пт: 09:00-20:00<br>
+        Сб: 10:00-18:00
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="page">
+
+  <h2>Связаться с нами</h2>
+
+  <div class="contact-form">
+    <input type="text" placeholder="Ваше имя">
+    <input type="email" placeholder="Email">
+    <textarea rows="5" placeholder="Сообщение"></textarea>
+
+    <button class="main-btn">
+      Отправить
+    </button>
+  </div>
+</section>
+
+<section id="cart" class="page">
+
+  <h2>Корзина</h2>
+
+  <div id="cart-items"></div>
+
+  <div class="total">
+    Итого: $<span id="total-price">0</span>
+  </div>
+
+  <div class="checkout">
+
+    <input type="text" placeholder="Имя">
+
+    <input type="text" placeholder="Телефон">
+
+    <input type="text" placeholder="Адрес">
+
+    <button class="main-btn" onclick="checkout()">
+      Оформить заказ
+    </button>
+
+    <div id="success-message"></div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Apple Tech
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
